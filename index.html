@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="container" id="top">
+            <img
+                src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg"
+                class="page-logo"
+                alt=""
+            />
+
+            <h1 class="page-title">GameFlix</h1>
+            <h2 class="page-subtitle">Biblioteca de jogos</h2>
+
+            <a href="https://alura.com.br/" target="_blank">
+                <img
+                    src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
+                    alt=""
+                    class="alura-logo"
+                />
+            </a>
+            <div>
+                <ul class="nav">
+                    <li><a href="#jogosSnes">Snes</a></li>
+                    <li><a href="#jogosPs1">Ps1</a></li>
+                    <li><a href="#jogosPsp">Psp</a></li>
+                    <li><a href="#jogosPs4">Ps4</a></li>
+                    <li><a href="#jogosOnline">Online</a></li>
+                    <li><a href="#jogosMobile">Mobile</a></li>
+                    <li><a href="#adicionaJogos">Adicionar</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main id="todos-jogos"></main>
+
+        <section class="container" id="adicionaJogos">
+            <a class="linkTopo" href="#top">Topo</a>
+            <form>
+                <p class="page-subtitle">Monte sua lista de jogos favoritos!</p>
+                <input
+                    type="text"
+                    id="nomeDoJogo"
+                    name="nomeDojogo"
+                    placeholder="Insira o título do jogo"
+                />
+                <input
+                    type="text"
+                    id="link"
+                    name="link"
+                    placeholder="Insira o endereço da capa do jogo"
+                />
+
+                <select name="tipoDeJogo" id="tipoDeJogo">
+                    <option value="snes">Snes</option>
+                    <option value="ps1">Ps1</option>
+                    <option value="psp">Psp</option>
+                    <option value="ps4">Ps4</option>
+                    <option value="online">Online</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+
+                <button type="button" onclick="adicionarJogo()">
+                    Adicionar Jogo
+                </button>
+
+                <h2 class="resultado" id="resultado"></h2>
+                <h2 class="aviso" id="aviso"></h2>
+            </form>
+        </section>
+    </body>
+    <script src="script.js"></script>
+</html>

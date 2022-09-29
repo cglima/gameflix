@@ -37,14 +37,20 @@ header {
 }
 
 .nav li {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
     color: white;
+    margin: 10px;
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .nav li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 form {

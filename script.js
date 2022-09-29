@@ -173,10 +173,6 @@ var todosJogos = {
                 url: "https://www.gamulator.com/img/roms/crash-bandicoot-warped-PS1-cover.jpg",
             },
             {
-                nome: "Harvest Moon Back to Nature",
-                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ--D-FkRdE6-OUWhhzS63y-gSS8s_xDLYiw&usqp=CAU",
-            },
-            {
                 nome: "Legend Of Mana",
                 url: "https://www.gamulator.com/img/roms/legend-of-mana-ps1-cover-slus-01013-340x483.jpg",
             },
@@ -195,7 +191,7 @@ var todosJogos = {
                 url: "https://cache.downloadroms.io/static/da13fa03f9af224ad0eebc1e65791f742562f805/image.jpeg",
             },
             {
-                nome: "Monster Junter Tri",
+                nome: "Monster Hunter",
                 url: "https://www.gamulator.com/img/roms/monster-hunter-freedom-unite-psp-cover.jpg",
             },
             {

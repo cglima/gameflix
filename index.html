@@ -31,12 +31,22 @@
                     <li><a href="#adicionaJogos">Adicionar</a></li>
                 </ul>
             </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div>
+                        <h2 id="tituloModal">TITULO</h2>
+                        <p id="descricaoModal">DESCRICAO</p>
+                        <img id="imgModal" src="URL" alt="TITULO" />
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main id="todos-jogos"></main>
 
         <section class="container" id="adicionaJogos">
-            <a class="linkTopo" href="#top">Topo</a>
+            <a class="linkTopo" href="#top">⬆</a>
             <form>
                 <p class="page-subtitle">Monte sua lista de jogos favoritos!</p>
                 <input

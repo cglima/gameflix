@@ -53,20 +53,25 @@ function renderizaListaJogos(lista) {
 
         const img = document.createElement("img");
         img.setAttribute("src", jogo.url);
+        img.onclick = () => {
+            openModal(lista, jogo);
+            return false;
+        };
 
         const span = document.createElement("span");
         span.innerHTML = jogo.nome;
 
-        var button = document.createElement("button");
-        button.innerHTML = "x";
-        button.onclick = () => {
+        const buttonDelete = document.createElement("button");
+        buttonDelete.setAttribute("class", "delete");
+        buttonDelete.innerHTML = "x";
+        buttonDelete.onclick = () => {
             removerJogo(lista, jogo);
             return false;
         };
 
         li.appendChild(img);
         li.appendChild(span);
-        li.appendChild(button);
+        li.appendChild(buttonDelete);
 
         return li;
     });
@@ -78,6 +83,7 @@ function renderizaListaJogos(lista) {
     linkTopo = document.createElement("a");
     linkTopo.setAttribute("href", "#top");
     linkTopo.setAttribute("class", "linkTopo");
+    linkTopo.innerHTML = "⬆";
 
     const h3 = document.createElement("h3");
     h3.setAttribute("class", "page-games");
@@ -125,6 +131,10 @@ var todosJogos = {
             {
                 nome: "Alladin",
                 url: "https://metagalaxia.com.br/wp-content/uploads/2018/01/Aladdin-disney-snes-super-nintendo-02.jpg",
+                descricao: `O Disney's Aladdin é um jogo de plataforma baseado no filme de 1992 do mesmo nome,
+                desenvolvido pela Virgin Games USA. O jogo foi lançado pela Sega para o Sega Genesis
+                em 11 de novembro de 1993 como um dos vários jogos baseados no filme,
+                incluindo outro jogo lançado no mesmo mês pela Capcom para o Super NES`,
             },
             {
                 nome: "Goof Troop",
@@ -297,3 +307,31 @@ var todosJogos = {
 };
 
 renderizaJogos();
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+function openModal(lista, jogo) {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    const titulo = document.getElementById("tituloModal");
+    titulo.innerHTML = jogo.nome;
+
+    const img = document.getElementById("imgModal");
+    img.setAttribute("src", jogo.url);
+    img.setAttribute("alt", jogo.nome);
+
+    const descricao = document.getElementById("descricaoModal");
+    descricao.innerHTML = jogo.descricao;
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    var span = document.getElementsByClassName("close")[0];
+}
